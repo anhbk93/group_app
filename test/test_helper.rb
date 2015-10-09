@@ -4,7 +4,6 @@ require 'rails/test_help'
 
 # Active Support Class
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
   include ApplicationHelper
   # Add more helper methods to be used by all tests here...
@@ -15,7 +14,7 @@ class ActiveSupport::TestCase
 
   # Logs in a test user.
   def log_in_as(user, options = {})
-    password    = options[:password]    || 'password'
+    password    = options[:password] || 'password'
     remember_me = options[:remember_me] || '1'
     if integration_test?
       post login_path, session: { email:       user.email,
