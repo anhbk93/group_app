@@ -58,5 +58,10 @@ This should help you track down any discrepancies between your code and the code
 
 ```
 Chapter 3: Phucvt
+Chapter 4: Thiennnt
+Chapter 5: Anhnv
+Chapter 6: Phucvt
+Chapter 7: Thiennnt
+Chapter 8: Anhnv
 ```
 
