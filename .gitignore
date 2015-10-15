@@ -30,7 +30,6 @@ sftp-config.json
 ### Ruby ###
 *.gem
 *.rbc
-/.config
 /coverage/
 /InstalledFiles
 /pkg/
