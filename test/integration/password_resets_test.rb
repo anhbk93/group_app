@@ -63,8 +63,10 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
     post password_resets_path, password_reset: { email: @user.email }
     @user = assigns(:user)
     @user.update_attribute(:reset_sent_at, 3.hours.ago)
-    patch password_reset_path(@user.reset_token), email: @user.email,
-    user: { password: 'foobar', password_confirmation: 'foobar' }
+    patch password_reset_path(@user.reset_token),
+          email: @user.email,
+          user: { password: 'foobar',
+                  password_confirmation: 'foobar' }
     assert_response :redirect
     follow_redirect!
     assert_match /expired/i, response.body
