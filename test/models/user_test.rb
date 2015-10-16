@@ -36,7 +36,7 @@ class UserTest < ActiveSupport::TestCase
                          first.last@foo.jp alice+bob@baz.cn foo@bar..com)
     valid_addresses.each do |valid_address|
       @user.email = valid_address
-      assert @user.valid?, "#{valid_address.inspect} should be valid"
+      assert @user.valid?, '#{valid_address.inspect} should be valid'
     end
   end
 
@@ -45,7 +45,7 @@ class UserTest < ActiveSupport::TestCase
                            foo@bar_baz.com foo@bar+baz.com)
     invalid_addresses.each do |invalid_address|
       @user.email = invalid_address
-      assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
+      assert_not @user.valid?, '#{invalid_address.inspect} should be invalid'
     end
   end
 
@@ -75,5 +75,13 @@ class UserTest < ActiveSupport::TestCase
 
   test 'authenticated? should return false for a user with nil digest' do
     assert_not @user.authenticated?(:remember, '')
+  end
+
+  test 'associated microposts should be destroyed' do
+    @user.save
+    @user.microposts.create!(content: 'Lorem ipsum')
+    assert_difference 'Micropost.count', -1 do
+      @user.destroy
+    end
   end
 end
