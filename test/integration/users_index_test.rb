@@ -1,5 +1,6 @@
 require 'test_helper'
 
+# Test User Index
 class UsersIndexTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
