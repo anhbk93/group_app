@@ -96,7 +96,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not michael.following?(archer)
   end
 
-  test "feed should have the right posts" do
+  test 'feed should have the right posts' do
     michael = users(:michael)
     archer  = users(:archer)
     lana    = users(:lana)
