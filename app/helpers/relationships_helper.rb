@@ -1,0 +1,3 @@
+# RelationshipsHelper
+module RelationshipsHelper
+end
