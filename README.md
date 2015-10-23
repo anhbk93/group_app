@@ -1,67 +1,29 @@
-## README
+## Sample app - Ruby on Rails Tutorial
 
-###Sample App 
-###Rails Tutorial Book
-```
-Member
-+ Nguyen Nhu Tam Thien
-+ Vo Thi Phuc
-+ Nguyen Van Anh
-```
-####About project
+#### Team member
+***
++ [Nguyen Van Anh](https://github.com/anhnvbk93)
++ [Nguyen Nhu Tam Thien](https://github.com/nguyennhutamthien1993)
++ [Vo Thi Phuc](https://github.com/phucvt)
 
-#####Ruby on Rails Tutorial: sample application
+#### About project
+***
+This app using Bootstrap for designing layouts.
+Some features: 
++ Build some static pages.
++ Build user management with:
+ - Sign up.
+ - Log in.
+ - Active via email.
+ - Reset password via email.
+ - Edit user information.
+ - Create, edit, delete microposts with an image.
++ Build following and unfollowing another user.
 
-This is the sample application for the
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](http://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/). You can use this reference implementation to help track down errors if you end up having trouble with code in the tutorial. In particular, as a first debugging check I suggest getting the test suite to pass on your local machine:
-
-```
-$ cd ~/workspace
-$ git clone https://github.com/mhartl/sample_app_3rd_edition.git
-$ cd sample_app_3rd_edition
-$ bundle install
-$ bundle exec rake db:migrate
-$ bundle exec rake test
-```
-
-The repository also has chapter-specific branches with the state of the code at the end of each chapter. You can view them as follows:
-
-```
-$ git branch --all
-  .
-  .
-  .
-  remotes/origin/account-activation-password-reset
-  remotes/origin/filling-in-layout
-  remotes/origin/following-users
-  remotes/origin/log-in-log-out
-  remotes/origin/master
-  remotes/origin/modeling-users
-  remotes/origin/sign-up
-  remotes/origin/static-pages
-  remotes/origin/updating-users
-  remotes/origin/user-microposts
-```
-
-To check out one of these chapter-specific branches, just use `git checkout` followed by the name without `remotes/origin/`:
-
-```
-$ git checkout log-in-log-out
-```
-
-This should help you track down any discrepancies between your code and the code in the tutorial.
-
-
-####Development Procedure
-
-```
-Chapter 3: Phucvt
-Chapter 4: Thiennnt
-Chapter 5: Anhnv
-Chapter 6: Phucvt
-Chapter 7: Thiennnt
-Chapter 8: Anhnv
-```
-
+#### Contributing
+***
+1. Fork it ( https://github.com/anhnvbk93/group-app )
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create a new Pull Request
