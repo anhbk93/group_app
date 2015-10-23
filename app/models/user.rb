@@ -2,7 +2,7 @@
 class User < ActiveRecord::Base
   has_many :microposts, dependent: :destroy
   has_many :active_relationships, class_name: 'Relationship',
-                                  foreign_key: 'follower_id', 
+                                  foreign_key: 'follower_id',
                                   dependent: :destroy
   has_many :passive_relationships,  class_name:  'Relationship',
                                     foreign_key: 'followed_id',
@@ -63,7 +63,7 @@ class User < ActiveRecord::Base
   # Sends activation email.
   def send_activation_email
     user = User.last
-    user.update_columns(active: self.activation_token)
+    user.update_columns(active: user.activation_token)
     UserMailer.account_activation(self).deliver_now
   end
 
