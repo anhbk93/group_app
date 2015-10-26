@@ -1,0 +1,8 @@
+<div id="reviews">
+  <% comments = micropost.comments.all %>
+    <% comments.each do |comment| %>
+    <strong><%= User.find_by_id(comment.user_id).name %>: </strong>
+      <%= comment.comment %>
+    <br>
+  <% end %>
+</div>
