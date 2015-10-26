@@ -1,10 +1,12 @@
+# CommentsController
 class CommentsController < ApplicationController
   def index
-    
   end
+
   def create
     @micropost = Micropost.find(params[:micropost_id])
-    @comment = @micropost.comments.create(user_id: current_user.id, comment: comment_params[:comment] )
+    @comment = @micropost.comments.create(user_id: current_user.id,
+                                          comment: comment_params[:comment])
     redirect_to :back
   end
 
