@@ -12,4 +12,19 @@
                                        data: { confirm: 'You sure?' } %>
     <% end %>
   </span>
+  
+  <div id="comment">
+    <%= form_for([micropost, micropost.comments.build]) do |f| %>
+    <p>
+      <br>
+      <%= f.text_area :comment, id: 'textarea_review'%>
+    </p>
+    <p>
+      <%= f.submit "Create review", id: "botton", class: "btn btn-success green" %>
+    </p>
+    <% end %>
+  </div>
+  <div id="reviews">   
+    <%= render 'comment/comment', micropost: micropost %>
+  </div>
 </li>
